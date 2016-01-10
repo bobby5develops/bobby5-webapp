@@ -5,17 +5,6 @@ html, body{
     padding:0;
 }
 
-
-.main-header{
-    height: 100px;
-}
-
-.sticky-top{
-    position: relative;
-    width: 100%;
-    top: 0;
-}
-
 ul{
     list-style-type: none;
     margin: 0;
@@ -39,6 +28,7 @@ li a{
 
 #main-content{
     background-color: #1077dc;
+    height: 100px;
 }
 
 
@@ -71,7 +61,7 @@ li a{
     display: none;
 }
 #main-navigation {
-    width: auto;
+    width: 100%;
     font-family: Raleway, sans-serif;
     line-height: 1;
 }
@@ -220,4 +210,78 @@ li a{
 }
 #main-navigation.small-screen #menu-button.menu-opened:before {
     background: #dff2fa;
+}
+
+
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+  SECTIONS
+============================================================ */
+section.module:last-child {
+    margin-bottom: 0;
+}
+section.module h2 {
+    margin-bottom: 40px;
+    font-family: "Roboto Slab", serif;
+    font-size: 30px;
+}
+section.module p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 300;
+}
+section.module p:last-child {
+    margin-bottom: 0;
+}
+section.module.content {
+    padding: 40px 0;
+}
+section.module.parallax {
+    padding: 240px 0;
+    background-position: 0 0;
+}
+section.module.parallax h1 {
+    color: #1e1e1e;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px white;
+}
+section.module.parallax-1 {
+    background-image: url("../img/pattern-01.png");
+}
+section.module.parallax-2 {
+    background-image: url("../img/pattern-02.png");
+}
+section.module.parallax-3 {
+    background-image: url("../img/pattern-03.png");
+}
+
+@media all and (min-width: 600px) {
+    section.module h2 {
+        font-size: 42px;
+    }
+    section.module p {
+        font-size: 20px;
+    }
+    section.module.parallax {
+        padding: 300px 0;
+    }
+    section.module.parallax h1 {
+        font-size: 96px;
+    }
+}
+@media all and (min-width: 960px) {
+    section.module.parallax h1 {
+        font-size: 160px;
+    }
 }
